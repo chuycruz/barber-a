@@ -1,0 +1,35 @@
+<div class="row" id="add-booking">
+    <div class="col-12">
+        <form action="">
+            <div class="row form-group">
+                <div class="col-12 mt-2">
+                    <label for="name">{{'label.name' | translate}}</label>
+                    <input type="text" name="name" class="form-control">
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-12 mt-2">
+                    <label for="date">{{'label.date' | translate}}</label>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-12 mt-2">
+                    <label for="services">{{'label.services' | translate}}</label>
+                    <select name="services" id="services" class="custom-select">
+                        <option [selected] = "first" [value]="option" *ngFor="let option of options; let first = first">{{option | translate}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-12">
+                    <button class="btn btn-block btn-primary" type="button">
+                        {{'label.add.booking' | translate}}
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

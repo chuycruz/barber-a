@@ -1,0 +1,10 @@
+#header {
+    background-color: #2E4053;
+    padding: 16px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.login-button {
+    margin: auto;
+    text-align: center;
+}
