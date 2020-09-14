@@ -4,6 +4,9 @@ import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
+import {CalendarModule} from 'primeng/calendar';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations"
+
 
 /* Servicios */
 import { TranslateService } from './services/translate.service';
@@ -15,6 +18,8 @@ import { AppComponent } from './app.component';
 import { TranslatePipe } from './pipes/translate.pipe';
 import { HeaderComponent } from './components/header/header.component';
 import { AddBookingComponent } from './components/add-booking/add-booking.component';
+import { from } from 'rxjs';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 /* Funcion para servicio de traduccion */
 export function translateFactory (provider: TranslateService){
@@ -32,7 +37,11 @@ export function translateFactory (provider: TranslateService){
     BrowserModule,
     NgbModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    CalendarModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     TranslateService,
